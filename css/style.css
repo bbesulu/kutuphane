@@ -1,0 +1,239 @@
+/* Riyadh Romile yazı stilini ve renk paletini entegre ediyoruz */
+body {
+    background-color: #1c261e; /* Görsellerindeki o derin, asil koyu haki/yeşil tonu */
+    color: #e3dcd0;           /* Yazılar için gözü yormayan eskitme krem tonu */
+    font-family: 'Riyadh Romile', 'Georgia', 'Times New Roman', serif; /* İstediğin özel yazı stili */
+    margin: 0;
+    padding: 0;
+    line-height: 1.75;
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+header h1 {
+    font-size: 2.4rem;
+    color: #f4eee3; /* Başlıklar için daha parlak ve belirgin fildişi/krem tonu */
+    letter-spacing: 4px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.alt-baslik {
+    color: #a4ad9f; /* Alt başlıklar için yumuşak yaprak yeşili tonu */
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.geri-link {
+    color: #a4ad9f;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.geri-link:hover {
+    color: #d1b477; /* Geri dönerken eskitme altın rengi parlaması */
+}
+
+/* Ana Sayfadaki Kapakların Yan Yana Dizilmesi */
+.kitap-izgarasi {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.kitap-kart {
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    width: 240px;
+    transition: transform 0.3s ease;
+}
+
+.kitap-kart:hover {
+    transform: translateY(-8px);
+}
+
+.kitap-kart img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6); /* Derinlik katan gölge */
+}
+
+.kitap-kart h2 {
+    font-size: 1.15rem;
+    margin-top: 18px;
+    letter-spacing: 3px;
+    font-weight: 400;
+    color: #e3dcd0;
+}
+
+/* Bölüm Listesi Tasarımı */
+.bolumler-alani {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.bolum-listesi {
+    list-style: none;
+    padding: 0;
+}
+
+.bolum-listesi li {
+    padding: 18px 0;
+    border-bottom: 1px solid #2b382d; /* Arka plana uygun çok hafif çizgi */
+}
+
+.bolum-listesi a {
+    color: #e3dcd0;
+    text-decoration: none;
+    font-size: 1.15rem;
+    transition: all 0.2s ease;
+}
+
+.bolum-listesi a:hover {
+    color: #d1b477; /* Bölüm isimlerinin üzerine gelince yanan asil eskitme altın rengi */
+    padding-left: 5px; /* Hafif bir kayma efekti verir */
+}
+
+/* Okuma Sayfası Metin Bloğu */
+.okuma-metni {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-size: 1.25rem; /* Okumayı kolaylaştırmak için yazıyı hafif büyüttük */
+    text-align: justify;
+    color: #e3dcd0;
+}
+
+.okuma-metni p {
+    margin-bottom: 28px;
+    text-indent: 20px; /* Paragraf başı girintisi (geleneksel kitap formatı) */
+}
+
+/* Alt Navigasyon (Önceki/Sonraki Sayfa Geçişleri) */
+.navigasyon {
+    display: flex;
+    justify-content: space-between;
+    max-width: 650px;
+    margin: 60px auto;
+    padding: 20px;
+    border-top: 1px solid #2b382d;
+}
+
+.navigasyon a {
+    color: #d1b477; /* Eskitme altın tonu */
+    text-decoration: none;
+    font-size: 1.05rem;
+    transition: color 0.2s;
+}
+
+.navigasyon a:hover {
+    color: #f4eee3;
+}
+
+/* Sağ Köşedeki Sosyal Medya Alanı (Instagram ve TikTok) */
+.sosyal-medya {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    z-index: 100;
+    display: flex; /* Logoları yan yana dizer */
+    gap: 20px;     /* İki logo arasındaki şık boşluk */
+}
+
+.sosyal-medya a {
+    color: #FFF1B5; /* Buttermilk Krem Rengi */
+    font-size: 1.8rem; /* Logoların büyüklüğü */
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Fareyle logoların üzerine gelince Pastel Maviye dönecekler */
+.sosyal-medya a:hover {
+    color: #C1DBE8; 
+    transform: scale(1.1); /* Hafifçe büyüme efekti */
+}
+
+/* Başlığın Altındaki Ana Menü Tasarımı */
+.ana-menu {
+    margin-top: 20px;
+}
+
+.ana-menu a {
+    color: #C1DBE8; /* Linkler ilk başta Pastel Mavi görünecek */
+    text-decoration: none;
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+    transition: color 0.2s ease;
+}
+
+/* Menüdeki linklerin üzerine gelince Krem rengi yanacak */
+.ana-menu a:hover {
+    color: #FFF1B5;
+}
+
+/* Aralardaki dik çizgilerin (|) rengi */
+.ana-menu .ayrac {
+    color: rgba(255, 241, 181, 0.3); /* Çok hafif transparan krem */
+    margin: 0 15px;
+    font-size: 0.9rem;
+}
+
+/* Arka Kapak Tanıtım Kutusu Tasarımı */
+.arka-kapak-alani {
+    max-width: 650px;
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+}
+
+.arka-kapak-kutu {
+    background-color: rgba(255, 241, 181, 0.04); /* Buttermilk renginin çok hafif, transparan hali */
+    border: 1px solid rgba(193, 219, 232, 0.15);  /* Pastel mavi tonlarında ince zarif çerçeve */
+    border-radius: 8px;
+    padding: 30px;
+    text-align: justify; /* Yazıyı iki yana yaslar */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.arka-kapak-kutu h3 {
+    color: #C1DBE8; /* Pastel Mavi başlık */
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center; /* Başlığı ortalar */
+}
+
+.arka-kapak-kutu p {
+    font-size: 1.1rem;
+    color: #FFF1B5; /* Buttermilk yazı rengi */
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.arka-kapak-kutu p:last-child {
+    margin-bottom: 0; /* Son paragrafın alt boşluğunu sıfırlar */
+}
+
+/* İçindekiler Başlığı */
+.icindekiler-baslik {
+    color: #C1DBE8;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+footer {
+    text-align: center;
+}
