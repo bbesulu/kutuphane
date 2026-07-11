@@ -138,7 +138,6 @@ header h1 {
 
 .navigasyon a:hover {
     color: #f4eee3;
-
 }
 
 /* Sağ Köşedeki Sosyal Medya Alanı (Instagram ve TikTok) */
@@ -163,7 +162,7 @@ header h1 {
     color: #C1DBE8; 
     transform: scale(1.1); /* Hafifçe büyüme efekti */
 }
-    
+
 /* Başlığın Altındaki Ana Menü Tasarımı */
 .ana-menu {
     margin-top: 25px;
