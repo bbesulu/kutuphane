@@ -138,46 +138,31 @@ header h1 {
 
 .navigasyon a:hover {
     color: #f4eee3;
-/* Masaüstü için logoları genel olarak biraz küçültüyoruz (Zarif dursunlar diye) */
-.sosyal-medya a {
-    font-size: 1.4rem; /* 1.8rem'den 1.4rem'e düşürdük, daha minik oldu */
+
 }
 
-/* TELEFONLAR İÇİN LOGO VE BAŞLIK DÜZENLEMESİ */
-@media (max-width: 600px) {
-    /* Logoların başlığın üzerine binmesini engelliyoruz */
-    .sosyal-medya {
-        position: relative; /* Sabit durmaktan kurtarıp esnek yapıyoruz */
-        top: 0;
-        right: 0;
-        justify-content: center; /* Telefon ekranında ortalıyoruz */
-        margin-top: 15px; /* Üstten tatlı bir boşluk */
-        order: 2; /* Sıralamayı aşağıya kaydırmak için */
-        gap: 25px; /* Aralarındaki boşluk */
-    }
+/* Sağ Köşedeki Sosyal Medya Alanı (Instagram ve TikTok) */
+.sosyal-medya {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    z-index: 100;
+    display: flex; /* Logoları yan yana dizer */
+    gap: 20px;     /* İki logo arasındaki şık boşluk */
+}
 
-    /* Logoları telefon ekranında ekstra minik ve kibar yapıyoruz */
-    .sosyal-medya a {
-        font-size: 1.25rem; 
-    }
+.sosyal-medya a {
+    color: #FFF1B5; /* Buttermilk Krem Rengi */
+    font-size: 1.8rem; /* Logoların büyüklüğü */
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
 
-    /* Başlık, Menü ve Logoların sırasını telefonda alt alta kusursuz dizmek için header'ı kutuluyoruz */
-    header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 30px 15px 15px 15px;
-    }
-
-    header h1 {
-        order: 1; /* Önce büyük harflerle Berre Lâl yazacak */
-        margin-bottom: 5px;
-    }
-
-    .ana-menu {
-        order: 3; /* En altta da menü linkleri (Ana Sayfa vb.) duracak */
-        margin-top: 20px;
-    }
+/* Fareyle logoların üzerine gelince Pastel Maviye dönecekler */
+.sosyal-medya a:hover {
+    color: #C1DBE8; 
+    transform: scale(1.1); /* Hafifçe büyüme efekti */
+}
     
 /* Başlığın Altındaki Ana Menü Tasarımı */
 .ana-menu {
