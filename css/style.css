@@ -165,27 +165,48 @@ header h1 {
 
 /* Başlığın Altındaki Ana Menü Tasarımı */
 .ana-menu {
-    margin-top: 20px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Kelimeler çok sıkışırsa düzenli dönsün diye */
+    gap: 25px; /* Kelimelerin arasındaki asil boşluk (Çizgi yerine bunu kullanıyoruz) */
 }
 
 .ana-menu a {
-    color: #C1DBE8; /* Linkler ilk başta Pastel Mavi görünecek */
+    color: #C1DBE8; /* Pastel Mavi */
     text-decoration: none;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     letter-spacing: 1px;
     transition: color 0.2s ease;
 }
 
-/* Menüdeki linklerin üzerine gelince Krem rengi yanacak */
 .ana-menu a:hover {
-    color: #FFF1B5;
+    color: #FFF1B5; /* Üzerine gelince Krem */
 }
 
-/* Aralardaki dik çizgilerin (|) rengi */
+/* Eski dik çizgileri (|) hem bilgisayarda hem telefonda tamamen gizliyoruz */
 .ana-menu .ayrac {
-    color: rgba(255, 241, 181, 0.3); /* Çok hafif transparan krem */
-    margin: 0 15px;
-    font-size: 0.9rem;
+    display: none;
+}
+
+/* TELEFONLAR İÇİN ÖZEL DÜZENLEME (Responsive) */
+@media (max-width: 600px) {
+    header {
+        padding: 40px 15px 20px 15px; /* Telefonlarda üst boşluğu biraz azalttık */
+    }
+    
+    header h1 {
+        font-size: 2.4rem; /* Başlık telefonda devasa durmasın diye hafif küçülttük */
+    }
+
+    .ana-menu {
+        gap: 20px; /* Telefon ekranında kelimelerin arası biraz daha dengeli dursun */
+    }
+
+    .ana-menu a {
+        font-size: 1rem; /* Okunuşu kolaylaştırdık */
+    }
 }
 
 /* Arka Kapak Tanıtım Kutusu Tasarımı */
