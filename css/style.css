@@ -258,3 +258,10 @@ header h1 {
 footer {
     text-align: center;
 }
+
+/* Spotify Oynatıcı Alanı */
+.spotify-alani {
+    max-width: 500px; /* Çok genişleyip yayılmasın diye sınır koyduk */
+    margin: 20px auto 30px auto; /* Üstten ve alttan tatlı boşluklar verip ortaladık */
+    padding: 0 15px;
+}
